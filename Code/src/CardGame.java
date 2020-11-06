@@ -29,20 +29,20 @@ public class CardGame {
 		String name = reader.readLine();
 		System.out.println("Hello! "+name);*/
 		
-		CardsFromFile("four.txt");
+		CardsFromFile("cards.txt");
 	}
 	
 	public static void CardsFromFile(String fileName) throws FileNotFoundException {
 		try {
 			File file = new File(fileName);
 			Scanner reader = new Scanner(file);
-			while (reader.hasNextLine()) {
+			while (reader.hasNextLine()){
 				String data = reader.nextLine();
 				System.out.println(data);
 			}
 			
 			reader.close();
-		} catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e){
 			System.out.println("File not found.");
 			e.printStackTrace();
 		}
