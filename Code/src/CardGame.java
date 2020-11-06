@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class CardGame {
 	
@@ -15,8 +16,12 @@ public class CardGame {
 	    
 	}
 	  
-	public void DetermineWinner(){
-	  
+	public void DetermineWinner(ArrayList<Card> hand){
+        for (Card c : hand) {
+            if (!c.equals(hand.get(0)))
+                return false;
+        }
+        return true;
 	}
 	
 	public static void main(String[] args) throws IOException {
