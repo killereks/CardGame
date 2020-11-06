@@ -24,7 +24,7 @@ public class CardGame {
 		String name = reader.readLine();
 		System.out.println("Hello! "+name);*/
 		
-		CardsFromFile("cards.txt");
+		CardsFromFile("four.txt");
 	}
 	
 	public static void CardsFromFile(String fileName) throws FileNotFoundException {
