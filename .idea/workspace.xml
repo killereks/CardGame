@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56719ca8-c764-46c3-afc3-084310718b8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/four.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,19 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="CardGame" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CardGame" />
+      <module name="CardGame CW" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="CardGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -63,14 +76,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="305" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604685297236">
+    <state x="216" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604685956018">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="305" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685297236" />
-    <state x="609" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604685251935">
+    <state x="216" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685956018" />
+    <state x="609" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604685905147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="609" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685251935" />
+    <state x="609" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685905147" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604685959489">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604685959489">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604685959489">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604685959489">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1604685205266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

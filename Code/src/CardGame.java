@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class CardGame {
 	
@@ -16,7 +17,7 @@ public class CardGame {
 	}
 	  
 	public void DetermineWinner(){
-	  
+
 	}
 	
 	public static void main(String[] args) throws IOException {
@@ -24,10 +25,12 @@ public class CardGame {
 		String name = reader.readLine();
 		System.out.println("Hello! "+name);*/
 		
-		CardsFromFile("cards.txt");
+		CardsFromFile("src/cards.txt");
 	}
 	
-	public static void CardsFromFile(String fileName) throws FileNotFoundException {
+	public static ArrayList<Integer> CardsFromFile(String fileName) throws FileNotFoundException {
+		ArrayList<Integer> output = new ArrayList<Integer>();
+
 		try {
 			File file = new File(fileName);
 			Scanner reader = new Scanner(file);
@@ -35,12 +38,13 @@ public class CardGame {
 				String data = reader.nextLine();
 				System.out.println(data);
 			}
-			
 			reader.close();
 		} catch (FileNotFoundException e){
 			System.out.println("File not found.");
 			e.printStackTrace();
 		}
+
+		return output;
 	}
 
 }
