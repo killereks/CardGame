@@ -16,7 +16,7 @@ public class CardGame {
 	    
 	}
 	  
-	public void DetermineWinner(ArrayList<Card> hand){
+	public boolean DetermineWinner(ArrayList<Card> hand){
         for (Card c : hand) {
             if (!c.equals(hand.get(0)))
                 return false;
