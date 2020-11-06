@@ -1,4 +1,5 @@
 
-public class Player {
 
+public class Player {
+	CardDeck cardDeck = new CardDeck();
 }
