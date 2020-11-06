@@ -16,8 +16,12 @@ public class CardGame {
 	    
 	}
 	  
-	public void DetermineWinner(){
-
+	public boolean DetermineWinner(ArrayList<Card> hand){
+        for (Card c : hand) {
+            if (!c.equals(hand.get(0)))
+                return false;
+        }
+        return true;
 	}
 	
 	public static void main(String[] args) throws IOException {
