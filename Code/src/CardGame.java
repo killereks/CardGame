@@ -11,11 +11,28 @@ public class CardGame {
 	ArrayList<Player> players = new ArrayList<Player>();
 	
 	public void initGame(){
-
+		/**
+		 * assign cards to each player and deck
+		 * check determine winner
+		 * 
+		 */
 	}
 	  
 	public void GameStep(){
-	    
+	    /**
+		 *	-order-
+		 *	threaded - each player take the top card (first in
+		 *	queue) from the deck to their left (p2 take from d2...)
+		 *
+		 *	move random card from each player 
+		 *	(not same as player number) to the bottom (end of
+		 *	queue) of the deck on the right (p2 -> d3...)
+		 *
+		 * check determine winner
+		 * 
+		 * repeat
+		 *	
+		 */
 	}
 
 	/**
