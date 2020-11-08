@@ -53,7 +53,7 @@ public class Testing {
      * @author 690034975
      */
     public static void TestOutcome(){
-        Print(ANSI_GREEN+testsPassed+" tests passed.");
+        Print(ANSI_GREEN+testsPassed+"/"+testsTotal+" tests passed.");
         if (testsPassed < testsTotal) {
             Print(ANSI_RED + (testsTotal - testsPassed) + " tests failed.");
         } else {
