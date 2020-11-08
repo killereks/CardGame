@@ -16,9 +16,8 @@ public class CardGame {
 		 * check determine winner
 		 * 
 		 */
-		
 	}
-	  
+	
 	public void GameStep(){
 	    /**
 		 *	-order-
@@ -54,14 +53,14 @@ public class CardGame {
 		String name = reader.readLine();
 		System.out.println("Hello! "+name);*/
 		
-		CardsFromFile("src/cards.txt");
+		System.out.println(CardsFromFile("cards.txt"));
 	}
 
 	/**
 	 * @param fileName name of the file to parse.
 	 * @return File parsed into an array of integers which are separated by a new line '\n'.
 	 * @throws FileNotFoundException When a file is not found, it throws this exception.
-	 * @author 690034975
+	 * @author 690034975 + 690022392
 	 */
 	public static ArrayList<Integer> CardsFromFile(String fileName) throws FileNotFoundException {
 		ArrayList<Integer> output = new ArrayList<Integer>();
@@ -71,7 +70,8 @@ public class CardGame {
 			Scanner reader = new Scanner(file);
 			while (reader.hasNextLine()){
 				String data = reader.nextLine();
-				System.out.println(data);
+				int cardNo = Integer.parseInt(data);
+				output.add(cardNo);
 			}
 			reader.close();
 		} catch (FileNotFoundException e){
