@@ -7,6 +7,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class CardGame {
+
+	ArrayList<Player> players = new ArrayList<Player>();
 	
 	public void initGame(){
 
@@ -15,13 +17,18 @@ public class CardGame {
 	public void GameStep(){
 	    
 	}
-	  
-	public boolean DetermineWinner(ArrayList<Card> hand){
-        for (Card c : hand) {
-            if (!c.equals(hand.get(0)))
-                return false;
-        }
-        return true;
+
+	/**
+	 * Returns the player with winning deck of cards, or null if nobody wins.
+	 *
+	 * @return The player that has won the game.
+	 * @author 690034975
+	 */
+	public Player DetermineWinner(){
+		for (Player player : players){
+			if (player.IsWinner()) return player;
+		}
+		return null;
 	}
 	
 	public static void main(String[] args) throws IOException {
@@ -31,7 +38,13 @@ public class CardGame {
 		
 		CardsFromFile("src/cards.txt");
 	}
-	
+
+	/**
+	 * @param fileName name of the file to parse.
+	 * @return File parsed into an array of integers which are separated by a new line '\n'.
+	 * @throws FileNotFoundException When a file is not found, it throws this exception.
+	 * @author 690034975
+	 */
 	public static ArrayList<Integer> CardsFromFile(String fileName) throws FileNotFoundException {
 		ArrayList<Integer> output = new ArrayList<Integer>();
 
@@ -50,5 +63,4 @@ public class CardGame {
 
 		return output;
 	}
-
 }
