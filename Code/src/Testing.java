@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Testing extends CardGame {
+public class Testing {
 
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
@@ -24,14 +24,21 @@ public class Testing extends CardGame {
         Test("are 3 equal cards and 1 different considered a winner", player2.IsWinner(), false);
         Test("player has 3 identical cards, did they win", player3.IsWinner(), false);
 
-        Print(ANSI_GREEN+testsPassed+" tests passed.");
-        if (testsPassed < testsTotal) {
-            Print(ANSI_RED + (testsTotal - testsPassed) + " tests failed.");
-        } else {
-            Print(ANSI_GREEN+"All tests passed!");
-        }
+        //Test("are card values read correctly from the files",
+                //CardGame.CardsFromFile("test.txt"), new ArrayList<int>(Array.asList(1,2,3,4,5)));
+
+        TestOutcome();
     }
 
+    /**
+     * Tests a given condition and compares it to the expected value.
+     * If the test fails the program will tell you which test has failed.
+     *
+     * @param testName - short description of the test
+     * @param condition - the outcome of the function
+     * @param expectedValue - the expected outcome of the function
+     * @author 690034975
+     */
     public static void Test(String testName, Object condition, Object expectedValue){
         if (condition == expectedValue){
             testsPassed++;
@@ -41,9 +48,33 @@ public class Testing extends CardGame {
         testsTotal++;
     }
 
+    /**
+     * Calculate the result of the tests and display which have failed.
+     * @author 690034975
+     */
+    public static void TestOutcome(){
+        Print(ANSI_GREEN+testsPassed+" tests passed.");
+        if (testsPassed < testsTotal) {
+            Print(ANSI_RED + (testsTotal - testsPassed) + " tests failed.");
+        } else {
+            Print(ANSI_GREEN+"All tests passed!");
+        }
+    }
+
+    /**
+     * short hand for System.out.println
+     * @param value - String to print
+     * @author 690034975
+     */
     public static void Print(String value){
         System.out.println(value);
     }
+
+    /**
+     * short hand for System.out.println
+     * @param value - boolean to print
+     * @author 690034975
+     */
     public static void Print(boolean value){
         System.out.println(value);
     }

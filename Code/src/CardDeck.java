@@ -27,7 +27,7 @@ public class CardDeck {
 	/**
 	 * Is this card deck a winning deck?
 	 * @return true/false if this card deck is a winning deck.
-	 * @author 690022392
+	 * @author 690034975
 	 */
 	
 	public boolean IsWinner(){

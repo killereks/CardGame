@@ -11,6 +11,11 @@ public class Player {
 		return cardDeck.IsWinner();
 	}
 
+	/**
+	 * Constructor for the player
+	 * @param cardValues - cards that should be given to the player
+	 * @author 690034975
+	 */
 	public Player(int[] cardValues){
 		for (int cardValue : cardValues){
 			cardDeck.AddCard(new Card(cardValue));
