@@ -24,10 +24,10 @@ public class CardDeck {
 		cards.remove(card);
 	}
 
-	/**
+/**
 	 * Is this card deck a winning deck?
 	 * @return true/false if this card deck is a winning deck.
-	 * @author 690034975
+	 * @author 690022392
 	 */
 	
 	public boolean IsWinner(){
