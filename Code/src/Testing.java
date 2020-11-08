@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class Testing extends CardGame {
 
     public static void main(String[] args){
+        Player player = new Player(new int[]{4,4,4,4});
 
+        assert(!player.IsWinner());
 
-        ArrayList<Card> deck1 = new ArrayList<Card>();
-        for (int i = 0; i < 4; i++) deck1.add(new Card(4));
-
+        Print("All tests have passed!");
     }
 
     public static void Print(String value){

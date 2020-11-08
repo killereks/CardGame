@@ -10,4 +10,10 @@ public class Player {
 	public boolean IsWinner(){
 		return cardDeck.IsWinner();
 	}
+
+	public Player(int[] cardValues){
+		for (int cardValue : cardValues){
+			cardDeck.AddCard(new Card(cardValue));
+		}
+	}
 }

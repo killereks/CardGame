@@ -8,7 +8,7 @@ public class CardDeck {
 	 * @param card card to add
 	 * @author 690034975
 	 */
-	public void AddCard(Card card) {
+	public void AddCard(Card card){
 		cards.add(card);
 	}
 
@@ -17,7 +17,7 @@ public class CardDeck {
 	 * @param card the card instance to remove.
 	 * @author 690034975
 	 */
-	public void RemoveCard(Card card) {
+	public void RemoveCard(Card card){
 		cards.remove(card);
 	}
 
