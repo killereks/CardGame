@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class CardGame {
 
 	ArrayList<Player> players = new ArrayList<Player>();
+	ArrayList<CardDeck> cards = new ArrayList<CardDeck>();
 	
 	public void initGame(){
 		/**

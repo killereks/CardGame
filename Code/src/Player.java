@@ -1,3 +1,4 @@
+import java.util.Dictionary;
 
 public class Player {
 	CardDeck cardDeck = new CardDeck();
@@ -21,4 +22,16 @@ public class Player {
 			cardDeck.AddCard(new Card(cardValue));
 		}
 	}
+
+	public void TakeTurn(CardDeck discardDeck, CardDeck pickupDeck){
+
+	}
+
+	/*Card CardToDiscard(){
+		/*Map<Card, Integer> cardFrequency = new HashMap<Card, Integer>();
+
+		for (Card card : CardDeck){
+
+		}*/
+	}*/
 }
