@@ -24,12 +24,7 @@ public class Testing extends CardGame {
         Test("are 3 equal cards and 1 different considered a winner", player2.IsWinner(), false);
         Test("player has 3 identical cards, did they win", player3.IsWinner(), false);
 
-        Print(ANSI_GREEN+testsPassed+" tests passed.");
-        if (testsPassed < testsTotal) {
-            Print(ANSI_RED + (testsTotal - testsPassed) + " tests failed.");
-        } else {
-            Print(ANSI_GREEN+"All tests passed!");
-        }
+        TestOutcome();
     }
 
     public static void Test(String testName, Object condition, Object expectedValue){
@@ -39,6 +34,15 @@ public class Testing extends CardGame {
             System.out.println(ANSI_RED+testName+" has failed.");
         }
         testsTotal++;
+    }
+
+    public static void TestOutcome(){
+        Print(ANSI_GREEN+testsPassed+" tests passed.");
+        if (testsPassed < testsTotal) {
+            Print(ANSI_RED + (testsTotal - testsPassed) + " tests failed.");
+        } else {
+            Print(ANSI_GREEN+"All tests passed!");
+        }
     }
 
     public static void Print(String value){
