@@ -28,10 +28,11 @@ public class Player {
 	}
 
 	/*Card CardToDiscard(){
-		/*Map<Card, Integer> cardFrequency = new HashMap<Card, Integer>();
+		Map<Card, Integer> cardFrequency = new HashMap<Card, Integer>();
 
 		for (Card card : CardDeck){
 
-		}*/
-	}*/
+		}
+	}
+	*/
 }
