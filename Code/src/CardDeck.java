@@ -27,11 +27,14 @@ public class CardDeck {
 	 * @author 690034975
 	 */
 	public boolean IsWinner(){
+		if (cards.size() != 4) return false;
+
 		for (int i = 0; i < cards.size()-1; i++){
-			if (cards.get(i) != cards.get(i+1)){
+			if (cards.get(i).GetValue() != cards.get(i+1).GetValue()){
 				return false;
 			}
 		}
+
 		return true;
 	}
 }
