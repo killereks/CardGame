@@ -11,7 +11,7 @@ public class CardGame {
 	ArrayList<Player> players = new ArrayList<Player>();
 	
 	public void initGame(){
-
+		
 	}
 	  
 	public void GameStep(){
