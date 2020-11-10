@@ -23,6 +23,14 @@ public class Player {
 		}
 	}
 
+	public Player(){
+
+	}
+
+	public void AddCard(int value){
+		cardDeck.AddCard(value);
+	}
+
 	public void TakeTurn(CardDeck discardDeck, CardDeck pickupDeck){
 
 	}

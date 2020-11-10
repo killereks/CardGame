@@ -11,25 +11,35 @@ public class CardGame {
 
 	ArrayList<Player> players = new ArrayList<Player>();
 	ArrayList<CardDeck> decks = new ArrayList<CardDeck>();
+
+	/**
+	 * Create a new card game instance with given player count
+	 * @param playerCount - amount of players in the game
+	 * @author 690034975
+	 */
+	public void CardGame(int playerCount){
+		for (int i = 0; i < playerCount; i++){
+			players.add(new Player());
+		}
+	}
 	
 	/**
 	 * Initialises the players hands and the cards in each deck
 	 * from the cards in the pack
 	 *
-	 * @param The ArrayList of cards from the file
+	 * @param cards the list of cards
 	 * @author 690022392
 	 */	
 	public void initGame(ArrayList<Integer> cards){
-
+		/*
 		
 		int[] hand = {0,0,0,0};
-		/**
-		 * assign cards to each player and deck
-		 * check determine winner
-		 * 
-		 */
+
+		//assign cards to each player and deck
+		// check determine winner
+
 		System.out.println(cards);
-		for (int i = 1; i < cards.size() + 1; i++) {		
+		for (int i = 1; i < cards.size() + 1; i++) {
 			hand[(i%4)] = cards.get(i-1);
 			//System.out.println(Arrays.toString(hand));
 			if ((i % 4 == 0)) {
@@ -42,6 +52,45 @@ public class CardGame {
 			}
 		}
 		System.out.println(players);
+		*/
+	}
+
+	/**
+	 * Checks if there is a perfect amount of cards in the game
+	 * @param cards - cards in the game
+	 * @return true/false if there is enough cards for the game
+	 * @author 690034975
+	 */
+	boolean EnoughCards(ArrayList<Integer> cards){
+		return 8 * players.size() == cards.size();
+	}
+
+	/**
+	 * Gives everyone 4 cards (players and decks)
+	 * @param cards - list of cards to use
+	 * @throws InvalidCardAmount - There aren't enough, or there are too many cards for the game.
+	 * @author 690034975
+	 */
+	void DealCards(ArrayList<Integer> cards) throws InvalidCardAmount {
+		int index = 0;
+
+		if (EnoughCards(cards)){
+			for (int i = 0; i < 4; i++){
+				for (Player player : players){
+					player.AddCard(cards.get(index));
+					index++;
+				}
+			}
+
+			for (CardDeck deck : decks){
+				deck.AddCard(cards.get(index));
+				index++;
+			}
+
+
+		} else {
+			throw new InvalidCardAmount("Not enough cards, or too many.");
+		}
 	}
 	
 	public void GameStep(){

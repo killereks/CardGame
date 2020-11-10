@@ -1,10 +1,16 @@
-/**
- * 
- */
 import java.util.ArrayList;
 
 public class CardDeck {
 	ArrayList<Card> cards = new ArrayList<Card>();
+
+	/**
+	 * CardDeck constructor, takes in any amount of card values
+	 * @param args - list of card values
+	 * @author 690034975
+	 */
+	public void CardDeck(int[] args){
+		AddCards(args);
+	}
 
 	/**
 	 * Adds the given card into the card deck.
@@ -13,6 +19,15 @@ public class CardDeck {
 	 */
 	public void AddCard(Card card) {
 		cards.add(card);
+	}
+
+	/**
+	 * Adds a card with a given card value
+	 * @param value - card value to add
+	 * @author 690034975
+	 */
+	public void AddCard(int value){
+		cards.add(new Card(value));
 	}
 
 	//public void AddCards(int[] args) {
@@ -41,10 +56,10 @@ public class CardDeck {
 		}
 	}
 
-/**
+	/**
 	 * Is this card deck a winning deck?
 	 * @return true/false if this card deck is a winning deck.
-	 * @author 690022392
+	 * @author 690034975
 	 */
 	
 	public boolean IsWinner(){
