@@ -2,7 +2,9 @@
  * The Player class is used to construct players as well as
  * implement the ations a player will make each turn of the game.
  */
+import java.util.ArrayList;
 import java.util.Dictionary;
+import java.util.Random;
 
 public class Player {
 	CardDeck cardDeck = new CardDeck();
@@ -47,15 +49,24 @@ public class Player {
 	 */
 	@Override
 	public String toString(){
-		return "[player"+number+"="+ cardDeck.toString()+"]";
+		return "player"+number+"="+ cardDeck.toString();
 	}
 
-	/*Card CardToDiscard(){
-		Map<Card, Integer> cardFrequency = new HashMap<Card, Integer>();
+	/**
+	 * Picks a random card such that the card isn't this player's number.
+	 *
+	 * For example if player number is 3 and his cards are 3,2,1,4 it will return either 2, 1 or 4
+	 *
+	 * @return Card card that should be discarded.
+	 * @author 690034975
+	 */
+	Card CardToDiscard(){
+		ArrayList<Card> potentialMoves =  new ArrayList<Card>();
 
-		for (Card card : CardDeck){
+		potentialMoves.addAll(cardDeck.getCards());
+		potentialMoves.removeIf(s -> s.GetValue() == number);
 
-		}
+		Random rand = new Random();
+		return potentialMoves.get(rand.nextInt(potentialMoves.size()));
 	}
-	*/
 }

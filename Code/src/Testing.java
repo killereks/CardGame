@@ -25,10 +25,13 @@ public class Testing {
         Player player = new Player(0, new int[]{4,4,4,4});
         Player player2 = new Player(1, new int[]{4,4,4,1});
         Player player3 = new Player(2, new int[]{4,4,4});
+        Player player4 = new Player(3, new int[]{3,2,2,2});
 
         Test("are 4 equal cards considered a winner", player.IsWinner(), true);
         Test("are 3 equal cards and 1 different considered a winner", player2.IsWinner(), false);
         Test("player has 3 identical cards, did they win", player3.IsWinner(), false);
+
+        Print(player4.CardToDiscard().toString());
 
         //Test("are card values read correctly from the files",
                 //CardGame.CardsFromFile("test.txt"), new ArrayList<int>(Array.asList(1,2,3,4,5)));

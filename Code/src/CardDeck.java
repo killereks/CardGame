@@ -3,6 +3,10 @@ import java.util.ArrayList;
 public class CardDeck {
 	ArrayList<Card> cards = new ArrayList<Card>();
 
+	public ArrayList<Card> getCards(){
+		return cards;
+	}
+
 	/**
 	 * CardDeck constructor, takes in any amount of card values
 	 * @param args - list of card values
@@ -81,8 +85,11 @@ public class CardDeck {
 	@Override
 	public String toString(){
 		String output = "{";
-		for (Card card : cards){
-			output += card.toString();
+		for (int i = 0; i < cards.size(); i++){
+			output += cards.get(i).toString();
+			if (i < cards.size() - 1){
+				output += ",";
+			}
 		}
 		return output + "}";
 	}
