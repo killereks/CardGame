@@ -3,6 +3,7 @@
  * with given input values for specific methods. The class will return
  * which tests pass and which fail in a relevant colour scheme.
  */
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Testing {
@@ -21,9 +22,9 @@ public class Testing {
     static int testsTotal = 0;
 
     public static void main(String[] args){
-        Player player = new Player(new int[]{4,4,4,4});
-        Player player2 = new Player(new int[]{4,4,4,1});
-        Player player3 = new Player(new int[]{4,4,4});
+        Player player = new Player(0, new int[]{4,4,4,4});
+        Player player2 = new Player(1, new int[]{4,4,4,1});
+        Player player3 = new Player(2, new int[]{4,4,4});
 
         Test("are 4 equal cards considered a winner", player.IsWinner(), true);
         Test("are 3 equal cards and 1 different considered a winner", player2.IsWinner(), false);
@@ -31,6 +32,17 @@ public class Testing {
 
         //Test("are card values read correctly from the files",
                 //CardGame.CardsFromFile("test.txt"), new ArrayList<int>(Array.asList(1,2,3,4,5)));
+
+        CardGame cardGame = new CardGame(4);
+        try {
+            cardGame.ReadCardsFromFile("src/cards32.txt");
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (InvalidCardAmount e){
+            e.printStackTrace();
+        }
+
+        Print(cardGame.toString());
 
         TestOutcome();
     }

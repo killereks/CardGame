@@ -73,4 +73,17 @@ public class CardDeck {
 
 		return true;
 	}
+
+	/**
+	 * @return stringified version of CardDeck
+	 * @author 690034975
+	 */
+	@Override
+	public String toString(){
+		String output = "{";
+		for (Card card : cards){
+			output += card.toString();
+		}
+		return output + "}";
+	}
 }

@@ -24,9 +24,9 @@ public class CardGame {
 	 * @param playerCount - amount of players in the game
 	 * @author 690034975
 	 */
-	public void CardGame(int playerCount){
+	public CardGame(int playerCount){
 		for (int i = 0; i < playerCount; i++){
-			players.add(new Player());
+			players.add(new Player(i));
 		}
 	}
 	
@@ -78,7 +78,7 @@ public class CardGame {
 	 * @throws InvalidCardAmount - There aren't enough, or there are too many cards for the game.
 	 * @author 690034975
 	 */
-	void DealCards(ArrayList<Integer> cards) throws InvalidCardAmount {
+	private void DealCards(ArrayList<Integer> cards) throws InvalidCardAmount {
 		int index = 0;
 
 		if (EnoughCards(cards)){
@@ -98,6 +98,11 @@ public class CardGame {
 		} else {
 			throw new InvalidCardAmount("Not enough cards, or too many.");
 		}
+	}
+
+	public void ReadCardsFromFile(String filename) throws FileNotFoundException, InvalidCardAmount {
+		ArrayList<Integer> cards = CardsFromFile(filename);
+		DealCards(cards);
 	}
 	
 	public void GameStep(){
@@ -123,7 +128,7 @@ public class CardGame {
 	 * @return The player that has won the game.
 	 * @author 690034975
 	 */
-	public Player DetermineWinner(){
+	private Player DetermineWinner(){
 		for (Player player : players){
 			if (player.IsWinner()) return player;
 		}
@@ -137,7 +142,7 @@ public class CardGame {
 		
 		ArrayList<Integer> cards = CardsFromFile("four.txt");
 		//System.out.println(cards);
-		CardGame game = new CardGame();
+		CardGame game = new CardGame(4);
 		game.initGame(cards);
 	}
 
@@ -147,7 +152,7 @@ public class CardGame {
 	 * @throws FileNotFoundException When a file is not found, it throws this exception.
 	 * @author 690034975 + 690022392
 	 */
-	public static ArrayList<Integer> CardsFromFile(String fileName) throws FileNotFoundException {
+	private static ArrayList<Integer> CardsFromFile(String fileName) throws FileNotFoundException {
 		ArrayList<Integer> output = new ArrayList<Integer>();
 
 		try {
@@ -164,5 +169,18 @@ public class CardGame {
 			e.printStackTrace();
 		}
 		return output;
+	}
+
+	/**
+	 * @return stringified version of CardGame
+	 * @author 690034975
+	 */
+	@Override
+	public String toString(){
+		String output = "(";
+		for (Player player : players){
+			output += player.toString();
+		}
+		return output + ")";
 	}
 }

@@ -6,6 +6,7 @@ import java.util.Dictionary;
 
 public class Player {
 	CardDeck cardDeck = new CardDeck();
+	Integer number;
 
 	/**
 	 * Is this card deck a winning deck?
@@ -21,14 +22,15 @@ public class Player {
 	 * @param cardValues - cards that should be given to the player
 	 * @author 690034975
 	 */
-	public Player(int[] cardValues){
+	public Player(Integer playerNumber, int[] cardValues){
 		for (int cardValue : cardValues){
 			cardDeck.AddCard(new Card(cardValue));
 		}
+		number = playerNumber;
 	}
 
-	public Player(){
-
+	public Player(Integer playerNumber){
+		number = playerNumber;
 	}
 
 	public void AddCard(int value){
@@ -37,6 +39,15 @@ public class Player {
 
 	public void TakeTurn(CardDeck discardDeck, CardDeck pickupDeck){
 
+	}
+
+	/**
+	 * @return stringified version of Player
+	 * @author 690034975
+	 */
+	@Override
+	public String toString(){
+		return "[player"+number+"="+ cardDeck.toString()+"]";
 	}
 
 	/*Card CardToDiscard(){
