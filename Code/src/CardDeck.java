@@ -34,11 +34,11 @@ public class CardDeck {
 		cards.add(new Card(value));
 	}
 
-	//public void AddCards(int[] args) {
-	//	for (int arg : args){
-	//		AddCard(new Card(arg));
-	//	}
-	//}
+	public void AddCards(int[] args) {
+		for (int arg : args){
+			AddCard(new Card(arg));
+		}
+	}
 
 	/**
 	 * Removes the given card from the card deck.
@@ -49,16 +49,19 @@ public class CardDeck {
 		cards.remove(card);
 	}
 
+	
 	/**
 	 * Constructor for the card deck
 	 * @param cardValues - cards that should be given to the deck
 	 * @author 690022392
 	 */
+	/*
 	public void AddCards(int[] cardValues){
 		for (int cardValue : cardValues){
 			AddCard(new Card(cardValue));
 		}
 	}
+	/*
 
 	/**
 	 * Is this card deck a winning deck?
@@ -78,6 +81,10 @@ public class CardDeck {
 		return true;
 	}
 
+	public Card topCard(){
+		return cards.get(0);
+	}
+
 	/**
 	 * @return stringified version of CardDeck
 	 * @author 690034975
@@ -93,4 +100,5 @@ public class CardDeck {
 		}
 		return output + "}";
 	}
+
 }

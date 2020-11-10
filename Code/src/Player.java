@@ -39,6 +39,10 @@ public class Player {
 		cardDeck.AddCard(value);
 	}
 
+	public RemoveCard(Card card){
+		cardDeck.RemoveCard(card);
+	}
+
 	public void TakeTurn(CardDeck discardDeck, CardDeck pickupDeck){
 
 	}
@@ -69,4 +73,5 @@ public class Player {
 		Random rand = new Random();
 		return potentialMoves.get(rand.nextInt(potentialMoves.size()));
 	}
+
 }

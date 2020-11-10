@@ -106,7 +106,15 @@ public class CardGame {
 		DealCards(cards);
 	}
 	
-	public void GameStep(){
+	Boolean take = true;
+	Boolean discard = false;
+	/**
+	 * Run the main functionality of the game, implementing player
+	 * moves each turn according to the rules. Threaded.
+	 *
+	 * @author 690022392
+	 */
+	public synchronized void GameStep(){
 	    /*
 		 *	-order-
 		 *	threaded - each player take the top card (first in
@@ -121,7 +129,83 @@ public class CardGame {
 		 * repeat
 		 *	
 		 */
+
+		while (DetermineWinner() == null) {
+			takeCard();
+			discardCard();
+			DetermineWinner();
+		}
+		System.out.println(DetermineWinner());
 	}
+		
+	/**
+	 * Make each player take a card from the previous
+	 * deck. Threaded.
+	 *
+	 * @author 690022392
+	 */	
+	public synchronized void takeCard() {
+		while (!take) {
+			try {
+				wait();
+			} catch (InterruptedException e) {}
+		}
+		for (int i = 0; i < players.size(); i++) {
+			//for (int j; j < decks.size(); j++) {
+			Card add = decks.get(i).topCard();
+			decks.get(i).RemoveCard(add);
+			players.get(i).AddCard(add.GetValue());			
+			//}
+		}
+	}
+
+	/**
+	 * Make each player discard a card to the next
+	 * deck. Threaded.
+	 *
+	 * @author 690022392
+	 */	
+	public synchronized void discardCard() {
+		while (!discard) {
+			try {
+				wait();
+			} catch (InterruptedException e) {}
+		}
+		//for (int i; i < players.size(); i++) {
+		//	cardDeck.RemoveCard(players.get(i).CardToDiscard());
+		//for (Player player : players){
+		for (int i = 0; i < players.size(); i++) {
+			//for (int j; j < decks.size(); j++) {
+			Card discard = players.get(i).CardToDiscard();
+			decks.get((i+1) % players.size()).AddCard(discard);
+			players.get(i).RemoveCard(discard);
+			//}
+		}
+	}
+
+
+	/**
+	 * Notifies the main thread that it is time for players to
+	 * take a card from the previous deck. Threaded.
+	 *
+	 * @author 690022392
+	 */
+	public synchronized void notifyTake() {
+		take = true;
+		notifyAll();
+	}
+
+	/**
+	 * Notifies the main thread that it is time for players to
+	 * discard a card to the next deck. Threaded.
+	 *
+	 * @author 690022392
+	 */
+	public synchronized void notifyDiscard() {
+		discard = true;
+		notifyAll();
+	}
+
 
 	/**
 	 * Returns the player with winning deck of cards, or null if nobody wins.
@@ -141,7 +225,7 @@ public class CardGame {
 		String name = reader.readLine();
 		System.out.println("Hello! "+name);*/
 		
-		ArrayList<Integer> cards = CardsFromFile("four.txt");
+		ArrayList<Integer> cards = CardsFromFile("src/four.txt");
 		//System.out.println(cards);
 		CardGame game = new CardGame(4);
 		game.initGame(cards);
