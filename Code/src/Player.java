@@ -1,6 +1,6 @@
 /**
  * The Player class is used to construct players as well as
- * implement the ations a player will make each turn of the game.
+ * implement the actions a player will make each turn of the game.
  */
 import java.util.ArrayList;
 import java.util.Dictionary;
