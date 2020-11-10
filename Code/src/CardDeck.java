@@ -16,6 +16,17 @@ public class CardDeck {
 	}
 
 	/**
+	 * Adds new cards based on given values (any length)
+	 * @param args - list of number values
+	 * @author 690034975
+	 */
+	public void AddCards(int[] args){
+		for (int arg : args){
+			AddCard(new Card(arg));
+		}
+	}
+
+	/**
 	 * Removes the given card from the card deck.
 	 * @param card the card instance to remove.
 	 * @author 690034975
