@@ -27,6 +27,7 @@ public class CardGame {
 	public CardGame(int playerCount){
 		for (int i = 0; i < playerCount; i++){
 			players.add(new Player(i));
+			decks.add(new CardDeck());
 		}
 	}
 	
@@ -87,12 +88,12 @@ public class CardGame {
 					player.AddCard(cards.get(index));
 					index++;
 				}
+				for (CardDeck deck : decks){
+					deck.AddCard(cards.get(index));
+					index++;
+				}
 			}
 
-			for (CardDeck deck : decks){
-				deck.AddCard(cards.get(index));
-				index++;
-			}
 
 
 		} else {
@@ -177,9 +178,13 @@ public class CardGame {
 	 */
 	@Override
 	public String toString(){
-		String output = "(";
+		String output = "players=(";
 		for (Player player : players){
 			output += player.toString();
+		}
+		output += ") decks=(";
+		for (CardDeck deck : decks){
+			output += deck.toString();
 		}
 		return output + ")";
 	}

@@ -12,5 +12,13 @@ public class Card {
 	public int GetValue(){ 
 		return this.value; 
 	}
-	
+
+	/**
+	 * @return stringified version of card.
+	 * @author 690034975
+	 */
+	@Override
+	public String toString(){
+		return Integer.toString(value);
+	}
 }
