@@ -15,16 +15,11 @@ public class CardDeck {
 		cards.add(card);
 	}
 
-	/**
-	 * Adds new cards based on given values (any length)
-	 * @param args - list of number values
-	 * @author 690034975
-	 */
-	public void AddCards(int[] args){
-		for (int arg : args){
-			AddCard(new Card(arg));
-		}
-	}
+	//public void AddCards(int[] args) {
+	//	for (int arg : args){
+	//		AddCard(new Card(arg));
+	//	}
+	//}
 
 	/**
 	 * Removes the given card from the card deck.
@@ -33,6 +28,17 @@ public class CardDeck {
 	 */
 	public void RemoveCard(Card card) {
 		cards.remove(card);
+	}
+
+	/**
+	 * Constructor for the card deck
+	 * @param cardValues - cards that should be given to the deck
+	 * @author 690022392
+	 */
+	public void AddCards(int[] cardValues){
+		for (int cardValue : cardValues){
+			AddCard(new Card(cardValue));
+		}
 	}
 
 /**

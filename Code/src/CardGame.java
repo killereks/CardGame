@@ -5,11 +5,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CardGame {
 
 	ArrayList<Player> players = new ArrayList<Player>();
-	ArrayList<CardDeck> cards = new ArrayList<CardDeck>();
+	ArrayList<CardDeck> decks = new ArrayList<CardDeck>();
 	
 	/**
 	 * Initialises the players hands and the cards in each deck
@@ -20,12 +21,8 @@ public class CardGame {
 	 */	
 	public void initGame(ArrayList<Integer> cards){
 
-		ArrayList<Integer> hand = new ArrayList<Integer>();
-		ArrayList<ArrayList<Integer>> playerHands = new ArrayList<ArrayList<Integer>>();
-		ArrayList<ArrayList<Integer>> cardDecks = new ArrayList<ArrayList<Integer>>();
-		//int[] hand = new int();
-		//ArrayList<int[]> playerHands = new ArrayList<int[]>();
-		//ArrayList<int[]> cardDecks = new ArrayList<int[]>();
+		
+		int[] hand = {0,0,0,0};
 		/**
 		 * assign cards to each player and deck
 		 * check determine winner
@@ -33,19 +30,18 @@ public class CardGame {
 		 */
 		System.out.println(cards);
 		for (int i = 1; i < cards.size() + 1; i++) {		
-			hand.add(cards.get(i-1));
+			hand[(i%4)] = cards.get(i-1);
+			//System.out.println(Arrays.toString(hand));
 			if ((i % 4 == 0)) {
 				if (i <= (cards.size()/2)) {
-					playerHands.add(new ArrayList<Integer>(hand));
-					//Player player = new Player(new ArrayList<Integer>(hand))); DOESNT WORK
+					players.add(new Player(hand));
 				} else {
-					cardDecks.add(new ArrayList<Integer>(hand));
+					decks.add(new AddCards(hand));
 				}
-				hand.clear();
+				System.out.println(Arrays.toString(hand));
 			}
 		}
-		System.out.println(playerHands);
-		System.out.println(cardDecks);
+		System.out.println(players);
 	}
 	
 	public void GameStep(){
