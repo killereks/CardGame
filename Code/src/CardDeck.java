@@ -1,5 +1,7 @@
 /**
- * 
+ * The CardDeck class is used to add and remove cards from decks
+ * based on the values of those cards. This class can also determine
+ * if a player has won based on the values of thier cards.
  */
 import java.util.ArrayList;
 

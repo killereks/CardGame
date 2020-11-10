@@ -1,3 +1,8 @@
+/**
+ * The Testing class is used to run various tests on the program
+ * with given input values for specific methods. The class will return
+ * which tests pass and which fail in a relevant colour scheme.
+ */
 import java.util.ArrayList;
 
 public class Testing {

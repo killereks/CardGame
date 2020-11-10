@@ -1,3 +1,7 @@
+/**
+ * The Player class is used to construct players as well as
+ * implement the ations a player will make each turn of the game.
+ */
 import java.util.Dictionary;
 
 public class Player {

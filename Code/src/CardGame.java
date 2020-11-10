@@ -1,3 +1,10 @@
+/**
+ * The CardGame class runs the main functionality of the game
+ * simulation. This class reads the carkds in from the pack text
+ * file, initialises the player hands and cards if the deck is valid,
+ * and implements the rules of the simulation while checking each
+ * player to find the winner.
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,18 +23,16 @@ public class CardGame {
 	 * Initialises the players hands and the cards in each deck
 	 * from the cards in the pack
 	 *
-	 * @param The ArrayList of cards from the file
+	 * @param cards The ArrayList of cards from the file
 	 * @author 690022392
 	 */	
 	public void initGame(ArrayList<Integer> cards){
-
-		
-		int[] hand = {0,0,0,0};
-		/**
+		/*
 		 * assign cards to each player and deck
 		 * check determine winner
 		 * 
 		 */
+		int[] hand = {0,0,0,0};
 		System.out.println(cards);
 		for (int i = 1; i < cards.size() + 1; i++) {		
 			hand[(i%4)] = cards.get(i-1);
@@ -45,7 +50,7 @@ public class CardGame {
 	}
 	
 	public void GameStep(){
-	    /**
+	    /*
 		 *	-order-
 		 *	threaded - each player take the top card (first in
 		 *	queue) from the deck to their left (p2 take from d2...)
@@ -107,7 +112,6 @@ public class CardGame {
 			System.out.println("File not found.");
 			e.printStackTrace();
 		}
-
 		return output;
 	}
 }
