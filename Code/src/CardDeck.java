@@ -1,5 +1,8 @@
 import java.util.ArrayList;
-
+/**
+ * The CardDeck class is a placeholder for a deck of cards with methods
+ * to operate on the cards.
+ */
 public class CardDeck {
 	ArrayList<Card> cards = new ArrayList<Card>();
 

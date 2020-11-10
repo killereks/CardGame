@@ -5,6 +5,7 @@
  */
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Testing {
 
@@ -26,13 +27,14 @@ public class Testing {
         Player player2 = new Player(1, new int[]{4,4,4,1});
         Player player3 = new Player(2, new int[]{4,4,4});
         Player player4 = new Player(3, new int[]{3,2,2,2});
+        Player player5 = new Player(4, new int[]{5,4,4,4});
 
         Test("are 4 equal cards considered a winner", player.IsWinner(), true);
         Test("are 3 equal cards and 1 different considered a winner", player2.IsWinner(), false);
         Test("player has 3 identical cards, did they win", player3.IsWinner(), false);
 
-        Print(player4.CardToDiscard().toString());
-
+        Test("Does player discard a card that isn't their number?", player4.CardToDiscard().GetValue(), 2);
+        Test("Does player discard the only card that isn't their number?", player5.CardToDiscard().GetValue(), 5);
         //Test("are card values read correctly from the files",
                 //CardGame.CardsFromFile("test.txt"), new ArrayList<int>(Array.asList(1,2,3,4,5)));
 
@@ -45,7 +47,7 @@ public class Testing {
             e.printStackTrace();
         }
 
-        Print(cardGame.toString());
+        //Print(cardGame.toString());
 
         TestOutcome();
     }
@@ -63,7 +65,9 @@ public class Testing {
         if (condition == expectedValue){
             testsPassed++;
         } else {
-            System.out.println(ANSI_RED+testName+" has failed.");
+            System.out.println(ANSI_RED+testName+" has failed."+ANSI_RESET);
+            System.out.println(ANSI_GREEN+ "expected value: "+expectedValue+ANSI_RESET);
+            System.out.println(ANSI_CYAN+"actual value: "+condition+ANSI_RESET);
         }
         testsTotal++;
     }

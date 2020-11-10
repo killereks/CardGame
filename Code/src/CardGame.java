@@ -1,15 +1,13 @@
 /**
  * The CardGame class runs the main functionality of the game
- * simulation. This class reads the carkds in from the pack text
+ * simulation. This class reads the cards in from the pack text
  * file, initialises the player hands and cards if the deck is valid,
  * and implements the rules of the simulation while checking each
  * player to find the winner.
  */
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -93,8 +91,6 @@ public class CardGame {
 					index++;
 				}
 			}
-
-
 
 		} else {
 			throw new InvalidCardAmount("Not enough cards, or too many.");
@@ -257,6 +253,28 @@ public class CardGame {
 	}
 
 	/**
+	 * Creates and writes content to a file
+	 * @param fileName - name of the file
+	 * @param contents - ArrayList of each line that should be inside the file
+	 */
+	public static void WriteToFile(String fileName, ArrayList<String> contents){
+		try {
+			File file = new File(fileName);
+			if (file.createNewFile()){
+				FileWriter writer = new FileWriter(fileName);
+				for (String line : contents){
+					writer.write(line+"\n");
+				}
+				writer.close();
+			} else {
+			System.out.println("WriteToFile: File already exists!");
+			}
+		} catch (IOException e){
+			e.printStackTrace();
+		}
+	}
+
+	/**
 	 * @return stringified version of CardGame
 	 * @author 690034975
 	 */
@@ -271,5 +289,11 @@ public class CardGame {
 			output += deck.toString();
 		}
 		return output + ")";
+	}
+
+	public static String GetDate(){
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		return dtf.format(now);
 	}
 }
