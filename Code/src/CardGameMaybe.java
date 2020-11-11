@@ -123,7 +123,7 @@ public class CardGame{
 		 * repeat
 		 *	
 		 */
-		
+		/*
 		System.out.println("Hello");
 		while (DetermineWinner() == null) {
 			System.out.println("");
@@ -146,6 +146,13 @@ public class CardGame{
 
 			System.out.println("The winner is " + DetermineWinner().toString());
 		} catch (NullPointerException e) {}
+		}
+		*/
+		while (DetermineWinner() == null) {
+			for (int i = 0; i < players.size(); i++) {
+				players.get(i).run(decks, 4);
+			DetermineWinner();
+			}
 		}
 	}
 

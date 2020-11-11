@@ -50,13 +50,56 @@ public class Player extends Thread{
 	Boolean take = true;
 	//Boolean discard = false;
 
+
+	public synchronized void run(ArrayList<CardDeck> decks, Integer playerCount){
+	    /*
+		 *	-order-
+		 *	threaded - each player take the top card (first in
+		 *	queue) from the deck to their left (p2 take from d2...)
+		 *
+		 *	move random card from each player 
+		 *	(not same as player number) to the bottom (end of
+		 *	queue) of the deck on the right (p2 -> d3...)
+		 *
+		 * check determine winner
+		 * 
+		 * repeat
+		 *	
+		 */
+		System.out.println("Hello");
+		while (IsWinner() == false) {
+			System.out.println("");
+			//System.out.println(players.size());
+			//for (int i = 0; i < players.size(); i++) {
+				//System.out.println(players.get(i).toString());
+				//System.out.println(decks.get(i).toString());
+				//System.out.println(decks.get((i+1) % players.size()).toString());
+			takeCard(decks.get(number));
+				//System.out.println(players.get(i).toString());
+				//System.out.println(decks.get(i).toString());
+				//System.out.println(decks.get((i+1) % players.size()).toString());
+			discardCard(decks.get((number+1) % playerCount));
+			System.out.println(toString());
+				//System.out.println(decks.get(i).toString());
+				//System.out.println(decks.get((i+1) % players.size()).toString());
+			IsWinner();
+			}
+		//try {
+		//	System.out.println("The winner is " + DetermineWinner().toString());
+		//} catch (NullPointerException e) {}
+		//}
+		if (IsWinner()){
+			System.out.println("The winner is " + toString());
+		}
+	}
+
 	/**
 	 * Make each player take a card from the previous deck. Threaded.
 	 *
 	 * @author 690022392
 	 */
-	public synchronized void takeCard(Player player, CardDeck deck) {
-	//public synchronized void takeCard(CardDeck deck) {
+	//public synchronized void takeCard(Player player, CardDeck deck) {
+	public synchronized void takeCard(CardDeck deck) {
 		while (!take) {
 			try {
 				wait();
@@ -68,8 +111,8 @@ public class Player extends Thread{
 			
 		Card add = deck.topCard();
 		deck.RemoveCard(add);
-		player.AddCard(add.GetValue());
-		//AddCard(add.GetValue());
+		//player.AddCard(add.GetValue());
+		AddCard(add.GetValue());
 		notifyDiscard();		
 			//}
 	}
@@ -80,8 +123,8 @@ public class Player extends Thread{
 	 *
 	 * @author 690022392
 	 */	
-	public synchronized void discardCard(Player player, CardDeck deck) {
-	//public synchronized void discardCard(CardDeck deck) {	
+	//public synchronized void discardCard(Player player, CardDeck deck) {
+	public synchronized void discardCard(CardDeck deck) {	
 		while (take) {
 			try {
 				wait();
@@ -94,8 +137,8 @@ public class Player extends Thread{
 			//for (int j; j < decks.size(); j++) {
 		Card discard = CardToDiscard();
 		deck.AddCard(discard);
-		player.RemoveCard(discard);
-		//RemoveCard(discard);
+		//player.RemoveCard(discard);
+		RemoveCard(discard);
 		notifyTake();
 			//}
 	}
