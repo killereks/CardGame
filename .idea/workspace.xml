@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56719ca8-c764-46c3-afc3-084310718b8b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CardGame CW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame CW.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/CardGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/CardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/CardGameMaybe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/PlayerMaybe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/src/Testing.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +26,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunAnythingCache">
@@ -76,6 +84,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1605119518408">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119518408" />
     <state x="216" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604685956018">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -84,26 +96,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="609" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685905147" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604685959489">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1605119673145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604685959489">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673145" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1605119673144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604685959489">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673144" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1605119673144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604685959489">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673144" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1605119673145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685959489" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1604685205266">
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673145" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1605120219882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685205266" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605120219882" />
+    <state x="209" y="33" key="new project wizard" timestamp="1605119667994">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119667994" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1604685325978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

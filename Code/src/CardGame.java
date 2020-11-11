@@ -168,7 +168,7 @@ public class CardGame{
 		String name = reader.readLine();
 		System.out.println("Hello! "+name);*/
 		
-		ArrayList<Integer> cards = CardsFromFile("four.txt");
+		ArrayList<Integer> cards = CardsFromFile("src/four.txt");
 		//System.out.println(cards);
 		CardGame game = new CardGame(4);
 		game.DealCards(cards);
