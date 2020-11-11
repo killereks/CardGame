@@ -10,7 +10,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class CardGame{
 
@@ -24,41 +23,13 @@ public class CardGame{
 	 */
 	public CardGame(int playerCount){
 		for (int i = 0; i < playerCount; i++){
-			players.add(new Player(i+1));
+			//players.add(new Player(i+1));
 			decks.add(new CardDeck());
 		}
-	}
-	
-	/**
-	 * Initialises the players hands and the cards in each deck
-	 * from the cards in the pack
-	 *
-	 * @param cards the list of cards
-	 * @author 690022392
-	 */	
-	public void initGame(ArrayList<Integer> cards){
-		/*
-		
-		int[] hand = {0,0,0,0};
-
-		//assign cards to each player and deck
-		// check determine winner
-
-		System.out.println(cards);
-		for (int i = 1; i < cards.size() + 1; i++) {
-			hand[(i%4)] = cards.get(i-1);
-			//System.out.println(Arrays.toString(hand));
-			if ((i % 4 == 0)) {
-				if (i <= (cards.size()/2)) {
-					players.add(new Player(hand));
-				} else {
-					decks.add(new AddCards(hand));
-				}
-				System.out.println(Arrays.toString(hand));
-			}
+		for (int i = 0; i < playerCount; i++){
+			players.add(new Player(decks, i+1));
+			//decks.add(new CardDeck());
 		}
-		System.out.println(players);
-		*/
 	}
 
 	/**
@@ -108,72 +79,19 @@ public class CardGame{
 	 *
 	 * @author 690022392
 	 */
-	public synchronized void GameStep(){
-	    /*
-		 *	-order-
-		 *	threaded - each player take the top card (first in
-		 *	queue) from the deck to their left (p2 take from d2...)
-		 *
-		 *	move random card from each player 
-		 *	(not same as player number) to the bottom (end of
-		 *	queue) of the deck on the right (p2 -> d3...)
-		 *
-		 * check determine winner
-		 * 
-		 * repeat
-		 *	
-		 */
-		
-		System.out.println("Hello");
-		while (DetermineWinner() == null) {
-			System.out.println("");
-			//System.out.println(players.size());
-			for (int i = 0; i < players.size(); i++) {
-				//System.out.println(players.get(i).toString());
-				//System.out.println(decks.get(i).toString());
-				//System.out.println(decks.get((i+1) % players.size()).toString());
-				players.get(i).takeCard(players.get(i), decks.get(i));
-				//System.out.println(players.get(i).toString());
-				//System.out.println(decks.get(i).toString());
-				//System.out.println(decks.get((i+1) % players.size()).toString());
-				players.get(i).discardCard(players.get(i), decks.get((i+1) % players.size()));
-				System.out.println(players.get(i).toString());
-				//System.out.println(decks.get(i).toString());
-				//System.out.println(decks.get((i+1) % players.size()).toString());
-			DetermineWinner();
-			}
-		try {
-
-			System.out.println("The winner is " + DetermineWinner().toString());
-		} catch (NullPointerException e) {}
+	public void GameStep(){
+		for (int i = 0; i < players.size(); i++) {
+			players.get(i).start();
 		}
 	}
 
-
-	/**
-	 * Returns the player with winning deck of cards, or null if nobody wins.
-	 *
-	 * @return The player that has won the game.
-	 * @author 690034975
-	 */
-	private Player DetermineWinner(){
-		for (Player player : players){
-			if (player.IsWinner()) return player;
-		}
-		return null;
-	}
 	
 	public static void main(String[] args) throws IOException, InvalidCardAmount {
-		/*BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		String name = reader.readLine();
-		System.out.println("Hello! "+name);*/
 		
-		ArrayList<Integer> cards = CardsFromFile("four.txt");
-		//System.out.println(cards);
+		ArrayList<Integer> cards = CardsFromFile("four2.txt");
 		CardGame game = new CardGame(4);
 		game.DealCards(cards);
 		game.GameStep();
-		//game.run();
 	}
 
 	/**
@@ -199,28 +117,6 @@ public class CardGame{
 			e.printStackTrace();
 		}
 		return output;
-	}
-
-	/**
-	 * Creates and writes content to a file
-	 * @param fileName - name of the file
-	 * @param contents - ArrayList of each line that should be inside the file
-	 */
-	public static void WriteToFile(String fileName, ArrayList<String> contents){
-		try {
-			File file = new File(fileName);
-			if (file.createNewFile()){
-				FileWriter writer = new FileWriter(fileName);
-				for (String line : contents){
-					writer.write(line+"\n");
-				}
-				writer.close();
-			} else {
-			System.out.println("WriteToFile: File already exists!");
-			}
-		} catch (IOException e){
-			e.printStackTrace();
-		}
 	}
 
 	/**

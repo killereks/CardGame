@@ -37,6 +37,11 @@ public class CardDeck {
 		cards.add(new Card(value));
 	}
 
+	/**
+	 * Constructor for the card deck
+	 * @param cardValues - cards that should be given to the deck
+	 * @author 690022392
+	 */
 	public void AddCards(int[] args) {
 		for (int arg : args){
 			AddCard(new Card(arg));
@@ -52,22 +57,9 @@ public class CardDeck {
 		cards.remove(card);
 	}
 
-	
-	/**
-	 * Constructor for the card deck
-	 * @param cardValues - cards that should be given to the deck
-	 * @author 690022392
-	 */
-	/*
-	public void AddCards(int[] cardValues){
-		for (int cardValue : cardValues){
-			AddCard(new Card(cardValue));
-		}
-	}
-	/*
-
 	/**
 	 * Is this card deck a winning deck?
+	 * 
 	 * @return true/false if this card deck is a winning deck.
 	 * @author 690034975
 	 */
@@ -84,8 +76,20 @@ public class CardDeck {
 		return true;
 	}
 
+	/**
+	 * @return next card to be drawn from this deck
+	 * @author 690022392
+	 */
 	public Card topCard(){
 		return cards.get(0);
+	}
+
+	/**
+	 * @return number of cards in this deck
+	 * @author 690022392
+	 */
+	public int cardCount(){
+		return cards.size();
 	}
 
 	/**
