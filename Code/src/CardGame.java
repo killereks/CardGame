@@ -48,7 +48,7 @@ public class CardGame{
 	 * @throws InvalidCardAmount - There aren't enough, or there are too many cards for the game.
 	 * @author 690034975
 	 */
-	private void DealCards(ArrayList<Integer> cards) throws InvalidCardAmount {
+	private void initGame(ArrayList<Integer> cards) throws InvalidCardAmount {
 		int index = 0;
 
 		if (EnoughCards(cards)){
@@ -70,7 +70,7 @@ public class CardGame{
 
 	public void ReadCardsFromFile(String filename) throws FileNotFoundException, InvalidCardAmount {
 		ArrayList<Integer> cards = CardsFromFile(filename);
-		DealCards(cards);
+		initGame(cards);
 	}
 	
 	/**
@@ -88,9 +88,13 @@ public class CardGame{
 	
 	public static void main(String[] args) throws IOException, InvalidCardAmount {
 		
+		//Console console = System.console();
+		//String progLanguauge = console.readLine("Enter your favourite programming language: ");
+
+
 		ArrayList<Integer> cards = CardsFromFile("four2.txt");
 		CardGame game = new CardGame(4);
-		game.DealCards(cards);
+		game.initGame(cards);
 		game.GameStep();
 	}
 
