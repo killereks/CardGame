@@ -1,128 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56719ca8-c764-46c3-afc3-084310718b8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CardGame CW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CardGame CW.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/CardGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Code/CardGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/Code/src/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/CardGameMaybe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/PlayerMaybe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/src/Testing.java" beforeDir="false" />
-    </list>
+    <list default="true" id="76718e0b-2aef-45a3-9f0b-ed2ce311b12e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1jvW7Cs2IZ6vXewlAya7NzspVU3" />
+  <component name="ProjectId" id="1k9jOUBsjJw3TpjWRoRLvjRSkkc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="CardGame.main();" />
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration name="CardGame" type="Application" factoryName="Application" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.CardGame">
+    <configuration name="CardGame" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="CardGame" />
-      <module name="CardGame CW" />
+      <module name="University Card Game" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="CardGame" />
+    <configuration name="CardGameTester" type="JUnit" factoryName="JUnit">
+      <module name="University Card Game" />
+      <useClassPathOnly />
+      <option name="MAIN_CLASS_NAME" value="CardGameTester" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JarApplication">
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Application.CardGame" />
+      <item itemvalue="JUnit.CardGameTester" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="56719ca8-c764-46c3-afc3-084310718b8b" name="Default Changelist" comment="" />
-      <created>1604684877281</created>
+      <changelist id="76718e0b-2aef-45a3-9f0b-ed2ce311b12e" name="Default Changelist" comment="" />
+      <created>1605119673509</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604684877281</updated>
+      <updated>1605119673509</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1605119518408">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1605119679415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119518408" />
-    <state x="216" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604685956018">
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119679415" />
+    <state x="144" y="15" width="1089" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605121035219">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="216" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685956018" />
-    <state x="609" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604685905147">
+    <state x="144" y="15" width="1089" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605121035219" />
+    <state x="492" y="197" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605121027031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="609" y="205" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685905147" />
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1605119673145">
+    <state x="492" y="197" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605121027031" />
+    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1605120367158">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673145" />
-    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1605119673144">
+    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605120367158" />
+    <state width="1493" height="230" key="GridCell.Tab.0.bottom" timestamp="1605121620150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673144" />
-    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1605119673144">
+    <state width="1493" height="230" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605121620150" />
+    <state width="1493" height="230" key="GridCell.Tab.0.center" timestamp="1605121620150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673144" />
-    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1605119673145">
+    <state width="1493" height="230" key="GridCell.Tab.0.center/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605121620150" />
+    <state width="1493" height="230" key="GridCell.Tab.0.left" timestamp="1605121620150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119673145" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1605120219882">
+    <state width="1493" height="230" key="GridCell.Tab.0.left/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605121620150" />
+    <state width="1493" height="230" key="GridCell.Tab.0.right" timestamp="1605121620150">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605120219882" />
-    <state x="209" y="33" key="new project wizard" timestamp="1605119667994">
+    <state width="1493" height="230" key="GridCell.Tab.0.right/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605121620150" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1605120368442">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605119667994" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1604685325978">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605120368442" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1605120381297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1604685325978" />
+    <state x="498" y="304" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824/-1600.173.1280.720@0.0.1536.824" timestamp="1605120381297" />
   </component>
 </project>
